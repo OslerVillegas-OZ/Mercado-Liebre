@@ -20,4 +20,8 @@ app.get('/login', (req, res) => {
 	res.sendFile(htmlPath);
 });
 
-app.listen(3000, () => console.log('Server Running on 3000'));
+//app.listen(3000, () => console.log('Server Running on 3000'));
+
+app.listen(process.env.PORT || 3000, function() {
+	console.log('Servidor corriendo en el puerto 3000')
+})
