@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('./blocks/meta') %>
+	<title>MercadoLiebre</title>
+	<%- include('./blocks/head-links') %>
+</head>
+<body>
+	<header>
+		<%- include('./blocks/header-top') %>
+		<%- include('./blocks/header-bottom') %>
+
+		<!-- Top Navigation Menu-->
+		<%- include('./blocks/menu-top') %>
+	</header>
+	<main>
+		<section title="última visita">
+			<h2 class="section-title">Ultima visita</h2>
+			<div class="grid-article">
+				<% for( let i = 0; i<products.length; i++ ) { %>
+					<article>
+						<img src="<%= products[i].image%>" alt="<%= products[i].description%>" width="300">
+						<div class="producto-info">
+							<i class="fas fa-truck"></i>
+							<p class="precio">$<%= products[i].price%>%</p>
+							<p class="descuento"><%= products[i].discount%>% OFF</p>
+							<h3 class="descripcion"><%= products[i].description%></h3>
+						</div>
+					</article>
+				<% } %>
+			</div>
+		</section>
+		<section title="Sección de Ofertas">
+			<h2 class="section-title">Sección de Ofertas</h2>
+			<div class="grid-article">
+				<% for( let i = 0; i<products.length; i++ ) { %>
+					<article>
+						<img src="<%= products[i].image%>" alt="<%= products[i].description%>" width="300">
+						<div class="producto-info">
+							<i class="fas fa-truck"></i>
+							<p class="precio">$<%= products[i].price%>%</p>
+							<p class="descuento"><%= products[i].discount%>% OFF</p>
+							<h3 class="descripcion"><%= products[i].description%></h3>
+						</div>
+					</article>
+				<% } %>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<%- include('./blocks/menu-footer') %>
+	</footer>
+</body>
+</html>

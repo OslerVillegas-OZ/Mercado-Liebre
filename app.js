@@ -1,27 +1,25 @@
 const express = require('express');
+
 const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, 'public')))
+// Set
+app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-	let htmlPath = path.resolve(__dirname, './views/home.html');
-	res.sendFile(htmlPath);
-});
+app.set('views', './views')
 
-app.get('/register', (req, res) => {
-	let htmlPath = path.resolve(__dirname, './views/register.html');
-	res.sendFile(htmlPath);
-});
+// Use
+app.use(express.static(path.resolve(__dirname, 'public')));
 
-app.get('/login', (req, res) => {
-	let htmlPath = path.resolve(__dirname, './views/login.html')
-	res.sendFile(htmlPath);
-});
+app.use(express.static('public'));
+
+// Routes
+const routesMain = require('./routes/main');
+
+app.use('/', routesMain);
 
 //app.listen(3000, () => console.log('Server Running on 3000'));
-
 app.listen(process.env.PORT || 3000, function() {
 	console.log('Servidor corriendo en el puerto 3000')
 })
