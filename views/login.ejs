@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('./blocks/meta') %>
+	<title>MercadoLiebre - Login</title>
+	<%- include('./blocks/head-links') %>
+</head>
+<body>
+	<header>
+		<%- include('./blocks/header-top') %>
+		<%- include('./blocks/header-bottom') %>
+
+		<!-- Top Navigation Menu-->
+		<%- include('./blocks/menu-top') %>
+	
+	</header>
+	<main>
+		<form action="#" method="">
+			<div class="user-info">
+				<label for="user"> Nomre de usuario</label>
+				<input type="text" id="user" name="user" placeholder="Usuario" minlength="3">
+				<label for="password">Password:</label>
+				<input type="pass" name="password" id="password" placeholder="Contraseña" minlength="8">
+			</div>
+			<div class="login-buttons">
+				<button type="submit" id="submit">Enviar</button>
+			</div>
+		</form>
+	</main>
+	<footer>
+		<%- include('./blocks/menu-footer') %>
+	</footer>
+</body>
+</html>

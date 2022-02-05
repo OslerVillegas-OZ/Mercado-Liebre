@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"description": "Cafetera Moulinex",
+		"price": 6770,
+		"discount": 40,
+		"image": "/images/img-cafetera-moulinex.jpg"
+	},
+	{
+		"id": 2,
+		"description": "MacBook Pro 2019",
+		"price": 230000,
+		"discount": 20,
+		"image": "/images/img-macbook-pro-2019.jpg"
+	},
+	{
+		"id": 3,
+		"description": "Samsung Galaxy S10",
+		"price": 70500,
+		"discount": 10,
+		"image": "/images/img-samsung-galaxy-s10.jpg"
+	},
+	{
+		"id": 4,
+		"description": "SmartTv Samsung 43\"",
+		"price": 6770,
+		"discount": 40,
+		"image": "/images/img-tv-samsung-smart.jpg"
+	}
+]
